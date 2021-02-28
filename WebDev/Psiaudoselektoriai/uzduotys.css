@@ -1,0 +1,138 @@
+/* Užduotis */
+/* 1.Psiaudo klases */
+.psiaudo-klases > li > a {
+    display: inline-block;
+    padding: 0 2em 0 2em;
+    text-decoration: none;
+    line-height: 2em;
+    color: black;
+    font-weight: bold;
+    transition: color 0.1s, background-color 0.1s, text-shadow 0.1s, box-shadow .5s;
+    border-radius: 1em;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.psiaudo-klases > li > a:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 0 0 10px 0 black;
+    text-shadow: none;
+}
+
+.psiaudo-klases > li > a:active {
+    background-color: white;
+    box-shadow: 0 0 30px -5px black, inset 0 0 10px 0 black;
+    color: black;
+}
+
+.psiaudo-klases > li:nth-child(2) > a {
+    transition: color 0.4s, background-color 0.4s, text-shadow 0.4s, box-shadow 1s;
+}
+
+.psiaudo-klases > li:nth-child(3) > a {
+    transition: color 0.8s, background-color 0.8s, text-shadow 0.8s, box-shadow 1.2s;
+}
+
+.psiaudo-klases > li:last-child > a {
+    transition: color 1.5s, background-color 1.5s, text-shadow 1.5s, box-shadow 2s;
+}
+/* 2.Psiaudo elementai */
+
+.psiaudo-elementai p:first-of-type::before {
+    content: "Įterptas tekstas";
+    background-color: black;
+    color: white;
+}
+
+.psiaudo-elementai p:nth-of-type(2)::after {
+    content: "Įterptas tekstas";
+    background-color: black;
+    color: white;
+}
+
+.psiaudo-elementai p:nth-of-type(3)::before {
+    content: "";
+    background: url(./ladybug.jpg) center/cover;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black ;
+}
+
+.psiaudo-elementai p:nth-of-type(4)::after {
+    content: "";
+    background: url(./ladybug.jpg) center/cover;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black ;
+}
+
+.psiaudo-elementai p:nth-of-type(5)::before {
+    content: "";
+    background: black;
+    display: inline-block;
+    width: 60px;
+    height: 10px;
+    border: 1px solid black ;
+}
+
+.psiaudo-elementai p:nth-of-type(6)::after {
+    content: "";
+    background: black;
+    display: inline-block;
+    width: 60px;
+    height: 10px;
+    border: 1px solid black ;
+}
+
+/* 3-5. Pirma raide, eilute. Selection */
+.selection::-moz-selection {
+    background-color: black;
+    color: white;
+}
+.selection::selection {
+    background-color: black;
+    color: white;
+}
+
+.first-letter::first-letter {
+    float: left;
+    font-size: 4em;
+    background-color: black;
+    color: white;
+    padding: 0 0.2em;
+}
+
+.first-line::first-line {
+    font-size: 2em;
+    letter-spacing: 0.5em;
+}
+
+/* 6. Child selektorius */
+
+.child > ul:first-of-type > li:nth-of-type(odd),
+.child > ul:nth-of-type(2) > li:nth-of-type(even),
+.child > ul:nth-of-type(3) > li:nth-of-type(4),
+.child > ul:nth-of-type(4) > li:first-child,
+.child > ul:last-child > li:last-child {
+    background-color: black;
+    color: white;
+}
+
+/* 7.Perejimai */
+.spalva:hover {
+    -webkit-filter: invert();
+            filter: invert();
+    transition: 1s;
+}
+
+.dydis:hover {
+    width: 45vw;
+    transition: 1s;
+}
+
+.pozicija:hover {
+    transform: translateX(-7.5vw);
+    transition: 1s;
+}

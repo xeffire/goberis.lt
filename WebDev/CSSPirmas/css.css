@@ -1,0 +1,94 @@
+.pirma {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.pirma > span {
+    font-family: 'Nanum Gothic Coding', monospace;
+ }
+ .antra {
+     font-size: 24px;
+ }
+ .antra > span {
+     color: navy;
+ }
+ .trecia {
+     width: 40%;
+ }
+
+ .trecia > span {
+     display: block;
+ }
+
+ .ketvirta {
+     border: solid 4px black;
+     color: palevioletred;
+     font-size: 40px;
+ }
+ .ketvirta > span {
+     font-size: 0.5em;
+ }
+ .penkta {
+     font-style: italic;
+ }
+ .penkta > span {
+     font-weight: 900;
+ }
+ .sesta {
+     text-decoration: underline;
+ }
+ .sesta > span {
+     text-decoration: line-through;
+ }
+ .septinta {
+     line-height: 26px;
+ }
+ .septinta > span {
+     text-transform: uppercase;
+ }
+ .astunta {
+     text-indent: 30px;
+ }
+
+ .astunta > span {
+     background-color: yellow;
+ }
+
+ .devinta {
+     background-color: aqua;
+ }
+ .devinta > span {
+     background-color: white;
+ }
+
+ .desimta {
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     color: rebeccapurple;
+     font-size: 30px;
+ }
+ span {
+     text-decoration: underline;
+ }
+ h1, h2 {
+     font-size: 40px;
+     font-weight: normal;
+     color: slateblue;
+     letter-spacing: 10px;
+ }
+ .pirmas, .antras {
+    width: 50%;
+    background-color: red;
+    height: 200px;
+ }
+ .antras {
+     background-color: blue;
+ }
+ .trecias, .ketvirtas {
+     width: 50%;
+     background-color: yellow;
+     height: 200px;
+     padding: 20px;
+     border: solid 5px black;
+ }
+ .ketvirtas {
+     background-color: green;
+     box-sizing: border-box;
+ }

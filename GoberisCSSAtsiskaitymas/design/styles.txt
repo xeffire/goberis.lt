@@ -1,0 +1,20 @@
+colors:
+
+primary: #fb4c47
+headings: #fee6e5
+body text: #4B4F51
+background: #f3f3f3;
+
+Fonts:
+
+red hat display - google fonts
+https://fonts.google.com/specimen/Red+Hat+Display?preview.text_type=custom
+
+headings:
+
+body: 18px 500,
+h1: 36px 700,
+h2  27px 700,
+h3  20px 700,
+h4: 18px 700.
+

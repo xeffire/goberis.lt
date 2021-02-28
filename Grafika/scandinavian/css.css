@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Reem Kufi', sans-serif;
+    color: #8e8080;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.examples {
+    width: 35%;
+}
+
+.main {
+    width: 60%;
+}
+
+.examples > div:first-child {
+    width: 100%;
+    height: calc(100vh / 3);
+    background: url(./workspace-1.jpg) center/cover;
+}
+
+.examples > div:nth-child(2) {
+    width: 100%;
+    height: calc(100vh / 3);
+    background: url(./workspace-2.jpg) center/cover;
+}
+
+.examples > div:last-child {
+    width: 100%;
+    height: calc(100vh / 3);
+    background: url(./workspace-3.jpg) center/cover;
+}
+
+.hamburger {
+    position: absolute;
+    right: 20px;
+    top: 40px;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 70px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 30vh 20% 0 20%;
+}
+
+.text {
+    margin: 0 20%;
+    width: 60%;
+}
+
+.row {
+    display: flex;
+}
+
+.row > div {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.feature,
+.cto,
+.row p {
+    display: block;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    height: 3em;
+}
+
+.feature {
+    border: 1px solid #8e8080;
+}
+
+.cto {
+    background-color: #0a0909;
+    color: white;
+}

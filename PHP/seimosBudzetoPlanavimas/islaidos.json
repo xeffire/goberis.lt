@@ -1,0 +1,22 @@
+[
+    ["Homer", "2020-11-09", "Alus Duffman", "3", "1.99"],
+    ["Marge", "2020-11-09", "Daržovės", "1", "5.99"],
+    ["Homer", "2020-11-09", "Spurgos", "5", "0.99"],
+    ["Liza", "2020-11-09", "Matematikos vadovėlis", "1", "19.99"],
+    ["Bart", "2020-11-10", "Buzz cola", "2", "1.59"],
+    ["Marge", "2020-11-09", "Vystiklai", "2", "7.50"],
+    ["Bart", "2020-11-09", "Komiksas 'Atomic man'", "2", "3.29"],
+    ["Liza", "2020-11-09", "Žurnalas 'Science direct'", "1", "15.00"],
+    ["Marge", "2020-11-10", "Dailės priemonės", "1", "25.00"],
+    ["Bart", "2020-11-10", "Guminukai", "1", "2.50"],
+    ["Homer", "2020-11-09", "Automobilio remontas", "1", "50.00"],
+    ["Marge", "2020-11-09", "Užmokestis už vandenį", "1", "63.24"],
+    ["Bart", "2020-11-09", "Dviračio padanga", "1", "7.99"],
+    ["Liza", "2020-11-09", "Kačių ėdalas 'Felix'", "2", "3.99"],
+    ["Liza", "2020-11-09", "Saksafono liežuvėlis", "1", "5.00"],
+    ["Homer", "2020-11-09", "Burito", "1", "7.80"],
+    ["Marge", "2020-11-09", "Sausainių šaldyta tešla", "2", "4.99"],
+    ["Liza", "2020-11-09", "Sąvaržėlės", "20", "0.10"],
+    ["Bart", "2020-11-09", "Kolekcinės kortelės", "5", "1.50"],
+    ["Homer", "2020-11-09", "Gėlės", "7", "1.29"]
+]

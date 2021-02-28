@@ -1,0 +1,14 @@
+Antrašte -> Scandinavian workspaces
+Tekstas -> Designed within space restrictions or as part of a bedroom, these examples from across the world have white space in mind. Think light, think airy, think IKEA. Think pops of colour that add focal points to clean spaces. 
+
+pavadinimas/logo -> Workspaces
+CTA (call to action) -> check out our workspaces
+
+Blokai: 
+
+1. trumpa ižanga: antrašte ir paragrafas;
+2. hero paveikslelis
+3. nuoroda i konkretu produkta, produkto nuotrauka.
+
+nuoroda i produkta (featured product)
+nuoroda i kitus pasiulymus (CTA - call to action)

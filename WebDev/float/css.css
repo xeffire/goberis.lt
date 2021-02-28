@@ -1,0 +1,27 @@
+body {
+    padding: 0 10vw;
+}
+h1 {
+    text-align: center;
+}
+p {
+    margin: 2rem;
+}
+
+img {
+    width: 30vw;
+    margin: 2rem;
+    margin-top: 0;
+}
+
+.para {
+    margin-top: 0;
+    width: calc(40vw - 4rem);
+}
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}

@@ -1,0 +1,64 @@
+body {
+    background: url(./images/bg1.png);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    color: gray;
+}
+h1, .hr {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    border-bottom: solid 3px #29ABE2;
+    width: 45%; /*Nesugebejau padaryti dinamisko plocio. Keiciant teksta, border-bottom neprisitaiko*/
+}
+
+.headline {
+    color: #29ABE2;
+}
+
+.letter {
+    position: relative;
+    width: 800px;
+    height: calc(800px * 1.41); /*A4 formato aspect ratio - 1:1.41*/
+    margin: auto;
+    background: url(./images/bg2.png),url(./images/bg3.png), white;
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    position: absolute;
+    top: 80px;
+    left: 80px;
+}
+
+.contacts {
+    text-align: end;
+    position: absolute;
+    right: 40px;
+    top: 100px;
+    list-style: none;
+}
+.contacts li {
+    margin-bottom: 0.5rem;
+}
+.contacts img{
+display: inline-block;
+vertical-align: middle;
+}
+
+.content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-40%);
+    width: 85%;
+    margin: 0 auto;
+}
+
+.content > p {
+    margin: 2rem 0;
+}
+
+.signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+}

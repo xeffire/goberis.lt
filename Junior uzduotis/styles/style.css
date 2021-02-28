@@ -1,0 +1,280 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    color: #131413;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    background-color: #131413;
+}
+
+.header-img {
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 30%;
+    filter: brightness(0.7);
+    -webkit-filter: brightness(0.7);
+}
+
+h1 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    padding-left: 1em;
+    font-size: 3rem;
+    color: #f9f8f7;
+    z-index: 2;
+}
+
+.highlight {
+    color: yellow;
+    font-size: 1.3em;
+    line-height: 0.6em;
+}
+
+.br {
+    display: block;
+}
+
+.anim-line {
+    width: 50vw;
+    display: block;
+    height: 0.5em;
+    border-bottom: solid 0.2em #550099;
+    position: relative;
+    right: 30%;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main > h2 {
+    width: 100%;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.projects-cont {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.project {
+    position: relative;
+    height: 80vw;
+}
+
+.project > img {
+    position: absolute;
+    height: 100%;
+    filter: brightness(0.5);
+    -webkit-filter: brightness(0.5);
+    z-index: -1;
+}
+
+.text-panel {
+    padding: 0 2rem;
+    padding-top: calc(80vw - 4.5rem);
+    height: 100%;
+    background-color: #0000;
+    z-index: 1;
+    overflow-y: hidden;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    font-size: 1rem;
+    color: #f9f8f7;
+}
+
+.text-panel:hover {
+    padding-top: 0;
+    background-color: #55009999;
+}
+
+.text-panel > h3 {
+    color: #f9f8f7;
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
+}
+
+.about-us {
+    display: flex;
+    padding-top: 5rem;
+}
+
+.about-us-title {
+    align-self: flex-start;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 8rem;
+}
+
+.about-us-title > h2 {
+    font-size: 3rem;
+}
+
+.our-services {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.bg-fill {
+    min-height: 80vw;
+    background-color: #550099;
+    color: #f9f8f7;
+    font-size: calc(100vw / 10);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 2rem;
+}
+ol {
+    list-style: none;
+    counter-reset: list;
+    padding: 1rem;
+}
+
+ol > li {
+    border-bottom: solid 1px gainsboro;
+    height: 3rem;
+    font-size: 1.2rem;
+    line-height: 3rem;
+}
+
+ol > li::before {
+    counter-increment: list;
+    content: "0" counter(list);
+    color: gainsboro;
+    padding-right: 1rem;
+}
+
+.know-us {
+    background: url(../images/pexels-mati-mango-5952738.jpg) center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vw;
+    color: #f9f8f7;
+    font-size: calc(80vw / 10);
+}
+
+.know-us > h2 {
+    text-align: center;
+    z-index: 1;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #5099;
+    z-index: 0;
+}
+
+footer {
+    background-color: #550099;
+    padding: 3rem;
+    display: flex;
+    counter-reset: list;
+}
+
+footer > div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2rem;
+    background: linear-gradient(145deg, rgba(65,27,148,1) 0%, rgba(75,0,226,1) 100%);
+    color: #f9f8f7;
+    font-size: 1.5rem;
+}
+
+form {
+    flex: 1;
+    padding: 2rem;
+}
+
+label {
+    width: 10rem;
+    color: gainsboro;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+input[type="text"], input[type="email"] {
+    position: absolute;
+    left: 0;
+    background-color: #550099;
+    border: none;
+    height: 3rem;
+    font-size: 1.2rem;
+    line-height: 3rem;
+}
+
+li > div {
+    position: relative;
+    display: inline;
+}
+
+input[type="submit"] {
+    background-color: yellow;
+    padding: 0.5rem 2rem;
+    font-size: 2rem;
+}
+
+
+
+@media only screen and (min-width: 450px) {
+    header {
+        height: 100vh;
+    }
+
+    .project {
+        width: 50%;
+        height: 40vw;
+    }
+    .our-services {
+        flex-direction: row;
+    }
+
+    .bg-fill  {
+        min-height: 0;
+        font-size: 3rem;
+        justify-self: stretch;
+    }
+
+    .know-us {
+        height: 100vh;
+    }
+
+    footer {
+        height: 100vh;
+    }
+}

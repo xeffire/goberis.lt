@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: lightblue;
+}
+h2 {
+    color: violet;
+}
+div {
+    width: 100%;
+}
+
+@media all and (min-width: 480px) {
+    body {
+        background-color: lightcoral;
+    }
+    div {
+        width: 50%;
+    }
+    h2 {
+        color: blue;
+    }
+
+}
+
+@media all and (min-width: 1024px) {
+    body {
+        background-color: wheat;
+    }
+    div {
+        width: calc(100% / 3);
+    }
+    h2 {
+        color: orange;
+    }
+}
+
+@media all and (min-width: 1440px) {
+    body {
+        background-color: initial;
+    }
+    div {
+        width: 25%;
+    }
+    h2 {
+        color: initial;
+    }
+}

@@ -1,0 +1,2 @@
+# Sportas
+Puslapis skirtas atvaizduoti vykusias rungtynes ir informaciją apie žaidėjų rezultatyvumą. Rungtynės, komandos ir žaidėjai yra atsitiktinai sugeneruoti, dalinai įvedant savo informacija, jei nori. Žaidėjai ir jų įmesti taškai sugeneruoji naudojantis [randomuser.me API.](randomuser.me). Komandos pridedamos iš [Teams.txt](goberis.lt/PHP/Sportas/Teams.txt) sčrašo. Rungtynės sugeneruojamos atsitiktinai parinkus dvi komandas ir piskyrus joms taškus. Visas redagavimas vyksta <goberis.lt/PHP/Sportas/koreguotiRungtynes.php> puslapyje. 

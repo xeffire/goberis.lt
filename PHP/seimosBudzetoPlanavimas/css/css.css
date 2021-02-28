@@ -1,0 +1,30 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0 10vw;
+    font-size: larger;
+}
+h1 {
+    text-align: center;
+    font-size: 60px;
+    color: yellow;
+    text-shadow: 0 0 5px black;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th{
+    border: solid 1px black;
+    text-align: start;
+}
+th:nth-of-type(2){
+    width: 100%;
+}
+tr:nth-of-type(odd) {
+    background-color: rgb(255, 255, 122);
+}
+
+.thumb {
+    height: 15vh;
+}

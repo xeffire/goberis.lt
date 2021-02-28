@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 1em;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+p,
+a,
+.beatles > li > ul > li {
+    /* text-shadow: 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white, -1px -1px 0 white, 0 0 2px white; */
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+body {
+    overflow-x: hidden;
+    background: url(./mezzanine.jpg);
+    background-attachment: fixed;
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 5%;
+    counter-reset: list;
+}
+
+.psiaudo-klases {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.psiaudo-klases > li {
+    margin: .5em 0;
+}
+
+.psiaudo,
+.beatles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h2 {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    line-height: 2em;
+    border-bottom-right-radius: 1em;
+    border-top-right-radius: 1em;
+    padding-right: 2em;
+    margin: 3em 0;
+}
+
+h3 {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    border-radius: .5em;
+    padding: 0 1em 0 1em;
+    margin: 2em 0;
+}
+
+ol > li {
+    counter-increment: list;
+}
+
+ol > li::before {
+    content: counter(list) ".\2002";
+    display: inline-block;
+    line-height: 2rem;
+    width: 50%;
+    color: white;
+    background-color: black;
+    font-weight: 800;
+    white-space: nowrap;
+    text-align: end;
+    margin-left: -50%;
+}
+
+.r-align {
+    text-align: end;
+}
+
+.r-align::before {
+    padding-left: 2em;
+    width: auto;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+}
+
+.r-align h2 {
+    margin-right: -300px;
+    padding: 0;
+}
+
+.r-align h2::after {
+    content: " ";
+    display: inline-block;
+    width: 300px;
+    background-color: black;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+
+.psiaudo-klases {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.psiaudo-elementai > p {
+    text-align: center;
+}
+
+.transition > div {
+    display: inline-block;
+    width: 15vw;
+    height: 15vw;
+    background-image: url(./bugs.jpg);
+    background-size: contain;
+    background-position: fixed;
+}
+
+.transition > img {
+    width: 15vw;
+    height: 15vw;
+}

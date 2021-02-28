@@ -1,0 +1,32 @@
+body {
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.border {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    margin: 2em 0;
+}
+
+.anim {
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.anim > svg {
+    height: 100%;
+    width: 100%;
+}

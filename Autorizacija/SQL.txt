@@ -1,0 +1,9 @@
+CREATE TABLE users(
+id int(11) not null auto_increment,
+name varchar(255) null,
+login varchar(100) null,
+email varchar(255) null,
+password varchar(500) null,
+avatar varchar(500) null,
+primary key (id)
+)

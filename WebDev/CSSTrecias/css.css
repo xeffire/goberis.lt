@@ -1,0 +1,55 @@
+body {
+  padding: 1em 0;
+}
+
+h1 {
+    font-size: 1.5rem;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 0;
+    z-index: 1;
+}
+
+.cont {
+  height: 80vh;
+  width: 80vw;
+  margin: 2em auto;
+  background-color: tomato;
+  border: solid 1px tomato;
+  position: relative;
+}
+
+.pirmas,
+.antras,
+.trecias,
+.ketvirtas,
+.cont:nth-of-type(2) > div {
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  position: absolute;
+}
+
+.pirmas {
+  top: 0;
+  left: 0;
+}
+
+.antras {
+  top: 0;
+  right: 0;
+}
+.trecias {
+  bottom: 0;
+  left: 0;
+}
+.ketvirtas {
+  bottom: 0;
+  right: 0;
+}
+
+.cont:nth-of-type(2) > div {
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+}
