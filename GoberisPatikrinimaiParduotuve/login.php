@@ -14,10 +14,10 @@ if (isset($_COOKIE['vardas'])) header('Location: main.php');
     <form action="Server/login.php" method="POST" class="d-flex flex-column">
         <label class="form-label">Vardas:</label>
         <input class="form-control" type="text" name="vardas">
-        <label class="form-label">Slaptazodis:</label>
+        <label class="form-label">Slaptažodis:</label>
         <input class="form-control" type="password" name="slaptazodis">
         <input class="btn btn-primary my-3" type="submit" value="Prisijungti">
-        <p class="text-muted">Jei neesate prisiregistraves - <a href="register.php">Registruokites</a></p>
+        <p class="text-muted">Jei esate neprisiregistravęs - <a href="register.php">Registruokitės</a></p>
     </form>
     <p class="alert alert-warning position-absolute top-0 w-50 text-center <?php if(!isset($_SESSION['msg'])) echo 'invisible';?>">
         <?php

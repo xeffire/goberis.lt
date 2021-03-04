@@ -18,14 +18,14 @@ if (isset($_COOKIE['user'])){
     <form action="Server/regist.php" method="POST" class="d-flex flex-column">
         <label class="form-label">Vardas:</label>
         <input class="form-control" type="text" name="vardas">
-        <label class="form-label">Pavard4s:</label>
+        <label class="form-label">Pavardė:</label>
         <input class="form-control" type="text" name="pavarde">
-        <label class="form-label">Slaptazodis:</label>
+        <label class="form-label">Slaptažodis:</label>
         <input class="form-control" type="password" name="slaptazodis">
-        <label class="form-label">Pakartoti slaptazod5:</label>
+        <label class="form-label">Pakartoti slaptažodį:</label>
         <input class="form-control" type="password" name="repeat">
         <input class="btn btn-primary my-3" type="submit" value="Prisijungti">
-        <p class="text-muted">Jei esate prisiregistraves - <a href="login.php">Prisijunkite</a></p>
+        <p class="text-muted">Jei esate prisiregistravęs - <a href="login.php">Prisijunkite</a></p>
     </form>
     <!-- Message bar -->
     <p class="alert alert-warning position-absolute top-0 w-50 text-center <?php if(!isset($_SESSION['msg'])) echo 'invisible';?>"><?php
