@@ -1,6 +1,6 @@
 <?php 
 session_start();
-if (!isset($_SESSION['avg'])) header('Location: main.php');
+if (!isset($_COOKIE['avg'])) header('Location: main.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
