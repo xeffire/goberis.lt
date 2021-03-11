@@ -3,20 +3,22 @@
   color: white;
   border-radius: 5px;
   box-sizing: border-box;
-  font-size: 1.2rem;
+  font-size: 16px;
   font-family: 'Inconsolata', monospace;
 }
 body {
   min-height: 100vh;
+  width: 100vw;
   margin: 0;
   background: white;
   display: flex;
+  flex-direction: column-reverse;
   align-items: center;
   justify-content: space-around;
 }
 main,
 .info {
-  width: calc(80vh * 2 / 3 + 0.66rem);
+  width: 100vw;
   background: rgb(153,153,153);
   background: linear-gradient(125deg, rgba(153,153,153,1) 0%, rgba(204,204,204,1) 100%);
   padding: 1rem;
@@ -35,7 +37,7 @@ main,
 }
 
 main {
-  height: 80vh;
+  height: 150vw;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 2rem repeat(6, 1fr);
@@ -50,7 +52,7 @@ h2 {
   grid-column: 1 / 5;
   text-align: center;
   align-self: center;
-  font-size: 4vh;
+  font-size: 2rem;
 }
 
 header {
@@ -66,18 +68,18 @@ header {
 }
 
 #last {
-  font-size: 2.5vh;
+  font-size: 1rem;
 }
 
 #curr {
-  font-size: 5vh;
+  font-size: 2rem;
 }
 
 button {
   background: rgb(120,120,120);
   background: linear-gradient(125deg, rgba(120,120,120,1) 0%, rgba(85,85,85,1) 100%);
   cursor: pointer;
-  font-size: 5vh;
+  font-size: 2rem;
 }
 
 button:first-of-type {
@@ -87,8 +89,26 @@ button:last-of-type {
   grid-column: 3 / 5;
 }
 
-@media only screen and (max-width: 900px) {
-  body {
-    flex-direction: column-reverse;
+@media only screen and (min-width: 400px) {
+  * {
+  font-size: 2.5vh;
+  }
+  main {
+    width: 400px;
+    height: 600px;
+  }
+  .info {
+    width: 400px
   }
 }
+
+@media only screen and (min-width: 900px) {
+  main {
+    width: calc(80vh * 2 / 3);
+    height: 80vh;
+  }
+  body {
+    flex-direction: row-reverse;
+  }
+}
+
