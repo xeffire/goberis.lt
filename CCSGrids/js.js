@@ -16,21 +16,16 @@ function Ops() {
   this.getOpBtns = function () {
     return [this["+"], this["-"], this["×"], this["÷"], this["."]];
   };
-  this.getFuncBtns = function () {
-    return [this.ac, this.del, this.equal];
-  };
+  //init: priskiria visus mygtukus kaip objekto properties
   for (let btn of document.getElementsByTagName("button")) {
     this[btn.innerText] = btn;
   }
-  console.log(this);
 }
 
-let ops = new Ops();
+let ops, last, curr;
 let lastSymbol = "0";
 let isLastNumFloat = false;
 let freshCalc = true;
-let last = document.getElementById("last");
-let curr = document.getElementById("curr");
 
 const assingFunctions = () => {
   for (let btn of [...ops.getNumberBtns(), ...ops.getOpBtns()]) {
@@ -64,9 +59,8 @@ const appendSymbol = (event) => {
     return;
   }
 
-  //if last symb is operator and new symb is also
-  //or last is 0 and new is 0 - remove last symb before adding new
-  if ((isOp && isLastOp) || (!isOp && lastSymbol === "0" && !isLastNumFloat)) {
+  //if last symb is operator and new symb is also: remove last symb before adding new
+  if (isOp && isLastOp) {
     curr.innerHTML = curr.innerText.slice(0, -1);
   }
 
@@ -76,8 +70,6 @@ const appendSymbol = (event) => {
   }
 
   curr.innerText += btn.innerText;
-
-  // lastSymbol = curr.innerText[curr.innerText.length-1] == /\d/?btn.innerText:lastSymbol;
   lastSymbol = curr.innerText[curr.innerText.length - 1];
   freshCalc = false;
 };
@@ -138,6 +130,7 @@ const calc = () => {
       continue;
     }
   }
+  
   curr.innerText = numArr[0].toFixed(6).replace(/\.?0*$/, "");
   last.innerText += numArr[0].toFixed(6).replace(/\.?0*$/, "");
   lastSymbol = curr.innerText;
@@ -180,4 +173,9 @@ const keyboardNav = (event) => {
   btn.click();
 };
 
-assingFunctions();
+window.onload = () => {
+  ops = new Ops();
+  last = document.getElementById("last");
+  curr = document.getElementById("curr");
+  assingFunctions();
+}
