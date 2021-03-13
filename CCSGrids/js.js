@@ -59,8 +59,10 @@ const appendSymbol = (event) => {
     return;
   }
 
-  //if last symb is operator and new symb is also: remove last symb before adding new
-  if (isOp && isLastOp) {
+  //if last symb is operator and new symb is also
+  //or curr number is 0 and new symb is number
+  //remove last symb before adding new
+  if (isOp && isLastOp || curr.innerText == '0' && !isOp) {
     curr.innerHTML = curr.innerText.slice(0, -1);
   }
 
@@ -75,11 +77,9 @@ const appendSymbol = (event) => {
 };
 
 const calc = () => {
-  console.log(lastSymbol);
   //remove operator at the end if needed
   if (["+", "-", "×", "÷"].includes(lastSymbol)) {
     curr.innerText = curr.innerText.slice(0, -1);
-    console.log(curr.innerText);
   }
 
   last.innerText = curr.innerText + " =";
@@ -89,11 +89,9 @@ const calc = () => {
   let opArr = curr.innerText.split(/[\d.]+/g).filter((el) => {
     return el != "";
   });
-  console.log(curr.innerText + "   " + numArr + "   " + opArr);
 
   //if first number arrays starts with NaN (first symbol is -): turn first num negative, fix order of nums and ops.
   if (isNaN(numArr[0])) {
-    console.log(numArr);
     numArr[0] = -numArr[1];
     numArr.splice(1, 1);
     opArr.splice(0, 1);
@@ -130,7 +128,7 @@ const calc = () => {
       continue;
     }
   }
-  
+
   curr.innerText = numArr[0].toFixed(6).replace(/\.?0*$/, "");
   last.innerText += numArr[0].toFixed(6).replace(/\.?0*$/, "");
   lastSymbol = curr.innerText;
