@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaisių ir daržovių enciklopedija</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="js.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand mr-auto">Enciklopedija</a>
+            <div class='btn-group mr-3'>
+                <button id='all' class="btn btn-outline-primary">Visi</button>
+                <button id='fruits' class="btn btn-outline-primary">Vaisiai</button>
+                <button id="vegs" class="btn btn-outline-primary">Daržovės</button>
+            </div>
+            <div class="form-inline">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0">Ieškoti</button>
+            </div>
+          </nav>
+    </header>
+
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="text-center">Vaisių ir daržovių enciklopedija</h1>
+            <p class="lead text-muted">Tai enciklopedija, kurioje galite susirasti ieškomo vaisiaus ar daržovės
+                informaciją.</p>
+        </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class='row tags m-2'>
+                <h4>Rodoma:</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm" data-type="V">
+                        <img src="images/banana.jpg" class="card-img-top" alt="banana">
+                        <div class="card-body">
+                            <h5 class="card-title">Bananas</h5>
+                            <p class="text-muted">Pietryčių Azija (Kinija, Indija, Tailandas)</p>
+                            <p class="card-text">
+                                Maistinės savybės 100gr.:
+                            <ul>
+                                <li>Kaloringumas: 88 kcal</li>
+                                <li>Angliavandeniai: 23g </li>
+                                <li>Baltymai: 1,1 g</li>
+                                <li>Riebalai: 0,3 g</li>
+                            </ul>
+                            </p>
+                            <p class="card-text">Vidutinis svoris 258gr.</p>
+                            <p class="card-text font-italic">
+                                Bananas — mūsų širdies draugas, kadangi jis yra geriausias kalio šaltinis.
+                                Suvalgant 3-4 bananus per dieną, galima patenkinti beveik pusę paros normos šio
+                                labai svarbaus mūsų organizmui, metalo. Žinome, kad kalis yra būtinas normaliam
+                                širdies raumens funkcionavimui. Todėl reguliarus bananų valgymas sumažina
+                                insulto bei infarkto riziką bei normalizuoja padidintą kraujospūdį. Be to,
+                                bananai puikiai apsaugo mūsų kraujagysles. Šie vaisiai apsaugo ir nuo
+                                aterosklerozės.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm" data-type="V">
+                        <img src="images/cheery.jpg" class="card-img-top" alt="vysnios">
+                        <div class="card-body">
+                            <h5 class="card-title">Vyšnios</h5>
+                            <p class="text-muted">Mažoji Azija</p>
+                            <p class="card-text">
+                                Maistinės savybės 100gr.:
+                            <ul>
+                                <li>Kaloringumas: 51 kcal</li>
+                                <li>Angliavandeniai: 12,2 g</li>
+                                <li>Baltymai: 1 g</li>
+                                <li>Riebalai: 0,6 g</li>
+                            </ul>
+                            </p>
+                            <p class="card-text">Vidutinis svoris 5 gr.</p>
+                            <p class="card-text font-italic">
+                                Reguliarus vyšnių naudojimas yra puiki aterosklerozės ir varikoze venų prevencija.
+                                Raudonųjų vaisių įtraukimas į meniu padeda sumažinti kraujospūdį, natūraliai stiprina
+                                kapiliarus. Kūnas mažina kenksmingo cholesterolio kiekį. Dėl to sumažėja širdies
+                                priepuolių ir insulto rizika, išeminė liga ir kiti pavojingi negalavimai. Todėl kvapnius
+                                vasaros vaisius galima saugiai rekomenduoti vidutinio ir vyresnio amžiaus žmonėms,
+                                kuriems kyla pavojus širdies ir kraujagyslių bei kraujagyslių ligoms.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm" data-type="V">
+                        <img src="images/orange.jpg" class="card-img-top" alt="apelsinas">
+                        <div class="card-body">
+                            <h5 class="card-title">Apelsinas</h5>
+                            <p class="text-muted">Pietų Kinija, Šiaurės Indija</p>
+                            <p class="card-text">
+                                Maistinės savybės 100gr.:
+                            <ul>
+                                <li>Kaloringumas: 38,7 kcal</li>
+                                <li>Angliavandeniai: 9,9 g</li>
+                                <li>Baltymai: 0,7 g</li>
+                                <li>Riebalai: 0,2 g</li>
+                            </ul>
+                            </p>
+                            <p class="card-text">Vidutinis svoris 120 gr.</p>
+                            <p class="card-text font-italic">
+                                Citrusiniuose vaisiuose yra medžiagų, vadinamų limonoidais. Jie padeda kovoti su vėžiu,
+                                suteikia organizmui tonusą ir išlieka kraujo sistemoje ilgiau nei 24 valandas.
+                                Dar viena organizmui naudinga apelsino savybė – kaulų stiprinimas. Apelsinas yra magnio,
+                                kuris būtinas kalcio pasisavinimui, šaltinis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm" data-type="V">
+                        <img src="images/strawberry.jpg" class="card-img-top" alt="braskes">
+                        <div class="card-body">
+                            <h5 class="card-title">Braškės</h5>
+                            <p class="text-muted">Prancūzija</p>
+                            <p class="card-text">
+                                Maistinės savybės 100gr:
+                            <ul>
+                                <li>Kaloringumas: 32 kcal</li>
+                                <li>Angliavandeniai: 8 g</li>
+                                <li>Baltymai: 0,7 g</li>
+                                <li>Riebalai: 0,3 g</li>
+                            </ul>
+                            </p>
+                            <p class="card-text">Vidutinis svoris 12gr.</p>
+                            <p class="card-text font-italic">
+                                Braškės – natūralus folio rūgšties, vitamino C ir kalio šaltinis. Folio rūgšties reikia
+                                smegenų veiklai, kalis reikalingas raumenims, elektrolitų pusiausvyrai. Vitaminas C
+                                stiprina imunitetą, jis reikalingas ir geležies įsisavinimui. Braškėse daugiau vitamino
+                                C negu apelsinuose. Braškėse taip pat yra vitaminų B5 ir B6, yra ir magnio, kalcio,
+                                vario. Braškėse daug antioksidantų ir fenolių, kurie stiprina imuninę sistemą ir padeda
+                                kovoti su uždegiminėmis ligomis ir gali sumažinti riziką susirgti vėžiu.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm" data-type="D">
+                        <img src="images/pumpkin.jpg" class="card-img-top" alt="moliugas">
+                        <div class="card-body">
+                            <h5 class="card-title">Moliūgas</h5>
+                            <p class="text-muted">Vidurio Amerikos</p>
+                            <p class="card-text">
+                                Maistinės savybės 100gr:
+                            <ul>
+                              <li>Kaloringumas: 23 kcal</li>
+                              <li>Angliavandeniai: 7g </li>
+                              <li>Baltymai: 1 g</li>
+                              <li>Riebalai: 0 g</li>
+                            </ul>
+                            </p>
+                             <p class="card-text">Vidutinis svoris,priklauso nuo rūšies</p>
+                            <p class="card-text font-italic">
+                              Moliūgai pasižymi didele nauda sveikatai, jie yra vieni svarbiausių beta karotino šaltinių.
+                               Nemažai atliktų mokslinių tyrimų rodo teigiamą ryšį tarp mitybos, kurioje gausu beta karotino,
+                              ir sumažėjusios prostatos ar storosios žarnos vėžio rizikos – daugiau šios medžiagos organizme
+                              turintys žmonės buvo mažiau linkę sirgti vėžiu ir kitomis lėtinėmis ligomis.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm" data-type="D">
+                        <img src="images/carrots.jpg" class="card-img-top" alt="morka">
+                        <div class="card-body">
+                            <h5 class="card-title">Morka</h5>
+                            <p class="text-muted">Š. Afrikoje, Š. Amerikoje, Pietvakarių Azijoje</p>
+                            <p class="card-text">
+                                Maistinės savybės 100gr.:
+                            <ul>
+                                <li>Kaloringumas: 23 kcal</li>
+                                <li>Angliavandeniai:  5,56 g </li>
+                                <li>Baltymai: 0,63 g</li>
+                                <li>Riebalai:  0,20 g</li>
+                            </ul>
+                            </p>
+                            <p class="card-text">Vidutinis svoris:100 gr</p>
+                            <p class="card-text font-italic">
+                              Morka
+                             – pigi daržovė, tačiau dėl jos mažo kaloringumo, ji laikoma grožio ir jaunystės
+                             paslaptimi. Morkoje yra vitamino C, D, E, B, kalcio, geležies, magnio ir daug
+                             karotino, kuris organizme virsta vitaminu A, šis vitaminas yra būtinas geram
+                             regėjimui palaikyti. Morkų sultys stiprina organizmą, padeda gerinti imuninę
+                             sistema ir greitina medžiagų apykaitą.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm" data-type="D">
+                        <img src="images/broccoli.jpg" class="card-img-top" alt="brokolis">
+                        <div class="card-body">
+                            <h5 class="card-title">Brokolis</h5>
+                            <p class="text-muted">Ispanija</p>
+                            <p class="card-text">
+                                Maistinės savybės 100gr.:
+                            <ul>
+                                <li>Kaloringumas: 29 kcal</li>
+                                <li>Angliavandeniai:  2,5 g </li>
+                                <li>Baltymai: 3,5 g</li>
+                                <li>Riebalai:  0,20 g</li>
+                            </ul>
+                            </p>
+                            <p class="card-text">Vidutinis svoris:300 g</p>
+                            <p class="card-text font-italic">
+                         Kalcio brokoliuose beveik penkiskart daugiau, negu žiediniuose kopūstuose. Dėl to rekomenduojama valgyti tiems,
+                         kurie alergiški karvės pienui, kad būtų patekintas kalcio poreikis.
+                         Brokoliuose daugiau ir karotino, geležies, vitamino C. Visai nedaug natrio,
+                         todėl ši daržovė labai tinka sutrikus inkstų veiklai. Koteliuose daug gynybines organizmo
+                         jėgas stiprinančio seleno.Švelnios struktūros dėka jie lengvai virškinami ir įsisavinami, todėl labai tinka ligonių ir sveikstančių maistui.
+                         Kadangi brokoliuose labai nedaug angliavandenių, jie tinka ir diabetikams.
+                         Brokoliai gerina virškinimą, padeda užkietėjus viduriams, stimuliuoja imuninę sistemą, stiprina širdį bei kraujotaką, o moterims palengvina menstruacijų
+                         negalavimus. Brokoliuose gausu sulforafano, todėl jie pasižymi priešvėžiniu veikimu.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" >
+                    <div class="card mb-4 shadow-sm" data-type="D">
+                        <img src="images/avocado.jpg" class="card-img-top" alt="Avokadas">
+                        <div class="card-body">
+                            <h5 class="card-title">Avokadas</h5>
+                            <p class="text-muted">Ispanija</p>
+                            <p class="card-text">
+                                Maistinės savybės 100gr.:
+                            <ul>
+                                <li>Kaloringumas: 243 kcal</li>
+                                <li>Angliavandeniai:  6 g </li>
+                                <li>Baltymai: 2 g</li>
+                                <li>Riebalai:  24 g</li>
+                            </ul>
+                            </p>
+                            <p class="card-text">Vidutinis svoris: 250–600 g</p>
+                            <p class="card-text font-italic">
+                              Avokadai yra itin aukštos maistinės vertės ir pastaruoju metu ypač populiarėjantys įvairiuose patiekaluose dėl savo skonio bei tekstūros. Avokadai taip pat yra itin sveiki,
+                               todėl dažnai vadinami “super maistu”. Visgi, ne veltui, nes avokadai iš tikrųjų turi “super”
+                              savybių sveikatai. Sutinkami skirtingos formos (nuo kriaušės formos iki apvalios) bei spalvos (nuo žalių iki juodų) avokadai.
+                              Taip pat avokadai turi nedidelius kiekius magnio, mangano, vario, geležies, cinko, fosforo, vitamino A, B1, B2 ir B3. 100 gramų avokado turi 160 kalorijų,
+                               2 gramus baltymų bei net 15 gramų gerųjų riebalų. Nors 100-e gramų avokado yra 9 gramai angliavandenių, net 7 iš jų yra naudingos skaidulos. Avokaduose nėra cholesterolio, natrio bei sočiųjų riebalų.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</body>
+
+</html>
