@@ -17,9 +17,9 @@ class FetchState {
   }
 
   static fail() {
-    this.okSpan.add("d-none");
-    this.waitSpan.add("d-none");
-    this.failSpan.remove("d-none");
+    this.okSpan .add("d-none");
+    this.waitSpan .add("d-none");
+    this.failSpan .remove("d-none");
   }
 }
 

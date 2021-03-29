@@ -1,5 +1,5 @@
 <?php
-    $conn = new PDO('mysql:dbname=goislt_goislt;host=jautis.serveriai.lt;charset=utf8', 'goislt', 'bhfjuHWfzG');
+    $conn = new PDO('mysql:dbname=goislt_goislt;host=localhost;charset=utf8', 'goislt', 'bhfjuHWfzG');
 
     header('Content-Type: application/json');
 
