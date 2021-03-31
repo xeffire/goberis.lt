@@ -12,7 +12,7 @@
     $method = isset($_REQUEST['method'])?$_REQUEST['method']:null;
 
     function get($conn){
-        $select = $conn->query("SELECT * FROM booklist");
+        $select = $conn->query("SELECT * FROM booklist ORDER BY id");
         $res = $select->fetchAll(PDO::FETCH_ASSOC);
         echo(json_encode($res));
     }

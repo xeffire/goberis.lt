@@ -27,50 +27,47 @@ class Stars {
   constructor(stars) {
     this.stars = [...stars.children];
     this.stars.forEach((star) => {
-      star.addEventListener("click", this.rate);
-    });
-    this.evt = new MouseEvent("click", {
-      bubbles: true,
-      cancelable: true,
-      view: window,
+      star.addEventListener("click", this.changeVal);
     });
   }
 
-  rate(e) {
-    e.target.classList.toggle("text-success");
-    console.log(this.parentNode.children);
-    for (let star of [...this.parentNode.children]) {
-      if (star === this) {
-        break;
-      }
-      star.className = this.className;
+  changeVal(e) {
+    let val = 0;
+    const stars = e.target.parentNode;
+    for(let star of [...stars.children]) {
+      val++;
+      if(star === e.target) {break}
     }
-    Stars.changeInputValue.call(this.parentNode, this);
+    if (stars.nextElementSibling.value == val) {val = 0};
+    stars.nextElementSibling.value = val;
+    Stars.renderStars.call(stars, val);
   }
 
-  static changeInputValue(star) {
-    this.nextElementSibling.value =
-      [...this.children].reduce((acc, elem) => {
-          if (elem.classList.contains('text-success')) {
-              return acc + 1;
-          } else {
-              return acc;
-          }
-      }, 0)
+  static renderStars(val) {
+    for (let star of [...this.children]) {
+      star.classList.remove('text-success');
+    }
+    for (let i = 0; i < val; i++) {
+      this.children[i].classList.add('text-success');
+    }
   }
 }
 
 const tableCols = ["id", "title", "author", "pgsDone", "rating"];
 const rate = new Stars(document.getElementsByClassName("stars")[0]);
+let data = {};
 
-document.getElementById("submit").addEventListener("click", () => {
+document.getElementById("submit").addEventListener("click", e => {
   FetchState.wait();
   fetch("dbHandler.php", {
     method: "POST",
     body: new FormData(document.getElementById("new")),
   })
-    .then((res) => res.json())
-    .then((res) => refresh(res));
+    .then(res => res.json())
+    .then(res => {data = res; return data})
+    .then(res => refresh(res));
+  e.target.previousElementSibling.reset();
+  Stars.renderStars.call(e.target.previousElementSibling.querySelector('.stars'), 0)
 });
 
 function refresh(data) {
@@ -102,14 +99,13 @@ function refresh(data) {
 
 fetch("dbHandler.php", { method: "GET" })
   .then((res) => res.json())
-  .then((res) => refresh(res));
-
-let fieldList = {};
+  .then(res => {data = res; return data})
+  .then(res => refresh(res));
 
 function edit(e) {
   let tr = e.target.parentNode.parentNode;
+  let fieldList = [...data.filter(obj => obj.id == tr.firstElementChild.innerText)][0];
   let editBtn = e.target;
-  fieldList["id"] = tr.children[0].innerText;
   [...tr.children].forEach((td, i) => {
     if (i == 0 || i == 5 || i == 6) {
       return true;
@@ -123,31 +119,38 @@ function edit(e) {
     td.appendChild(field);
   });
   editBtn.className = "bi bi-check text-success";
+
+  //hide other edit btns
+  [...document.getElementsByClassName('bi-pencil')].forEach(pencil => pencil.style.visibility = 'hidden');
+
   editBtn.removeEventListener("click", edit);
   editBtn.addEventListener("click", update);
   editBtn.addEventListener("click", confirmEdit);
 }
 
-function update() {
+function update(e) {
   FetchState.wait();
   let form = new FormData();
-
+  const tr = e.target.parentNode.parentNode;
+  let fieldList = [...data.filter(obj => obj.id == tr.firstElementChild.innerText)][0];
+  
   for (let key in fieldList) {
-    if (typeof fieldList[key] === "string") {
-      form.set("id", fieldList[key]);
-      continue;
-    }
+    if (key === 'id') {form.set('id', fieldList[key]); continue}
+    if (tableCols.indexOf(key) === -1) {continue}
     form.set(key, fieldList[key].value);
   }
   form.set("method", "update");
 
   fetch("dbhandler.php", { method: "POST", body: form })
     .then((res) => res.json())
-    .then((res) => console.log(res));
+    .then(res => {data = res; return data})
+    .then(res => refresh(res));
 }
+
 function confirmEdit(e) {
-  let tr = e.target.parentNode.parentNode;
-  let editBtn = e.target;
+  const tr = e.target.parentNode.parentNode;
+  const fieldList = [...data.filter(obj => obj.id == tr.firstElementChild.innerText)][0];
+  const editBtn = e.target;
   [...tr.children].forEach((td, i) => {
     if (i == 0 || i == 5 || i == 6) {
       return true;
@@ -156,6 +159,10 @@ function confirmEdit(e) {
     td.innerText = fieldList[tableCols[i]].value;
   });
   editBtn.className = "bi bi-pencil";
+
+    //show edit btns
+    [...document.getElementsByClassName('bi-pencil')].forEach(pencil => pencil.style.visibility = 'visible');
+
   editBtn.removeEventListener("click", update);
   editBtn.removeEventListener("click", confirmEdit);
   editBtn.addEventListener("click", edit);
@@ -164,6 +171,9 @@ function confirmEdit(e) {
 
 function del(e) {
   let id = e.target.parentNode.parentNode.children[0].innerText;
-  fetch(`dbhandler.php?id=${id}&method=delete`, { method: "GET" });
+  fetch(`dbhandler.php?id=${id}&method=delete`, { method: "GET" })
+    .then(res => res.json())
+    .then(res => {data = res; return data})
+    .then(res => refresh(res));
   e.target.parentNode.parentNode.remove();
 }
