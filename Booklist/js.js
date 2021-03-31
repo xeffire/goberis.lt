@@ -141,7 +141,7 @@ function update(e) {
   }
   form.set("method", "update");
 
-  fetch("dbhandler.php", { method: "POST", body: form })
+  fetch("dbHandler.php", { method: "POST", body: form })
     .then((res) => res.json())
     .then(res => {data = res; return data})
     .then(res => refresh(res));
@@ -171,7 +171,7 @@ function confirmEdit(e) {
 
 function del(e) {
   let id = e.target.parentNode.parentNode.children[0].innerText;
-  fetch(`dbhandler.php?id=${id}&method=delete`, { method: "GET" })
+  fetch(`dbHandler.php?id=${id}&method=delete`, { method: "GET" })
     .then(res => res.json())
     .then(res => {data = res; return data})
     .then(res => refresh(res));
